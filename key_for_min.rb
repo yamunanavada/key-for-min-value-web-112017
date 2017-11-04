@@ -3,12 +3,12 @@
 def key_for_min_value(name_hash)
   names = []
   nums = []
-  
+
 
   if name_hash == {}
     nil
   else
-    
+
     name_hash.collect do |name, num|
       names.push(name)
       nums.push(num)
@@ -16,14 +16,14 @@ def key_for_min_value(name_hash)
     prev_num = nums[0]
     nums.each do |x|
       if x < prev_num
-        prev_num = x 
+        prev_num = x
       end
     end
-    
+
     min_name = names[nums.index(prev_num)]
-    
-    
+
+
   end
-  
+
   min_name
 end
